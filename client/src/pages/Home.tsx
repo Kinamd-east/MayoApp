@@ -34,24 +34,19 @@ const Home = () => {
   return (
     <div>
       <BackgroundBeamsWithCollision>
-        <h2 className="text-2xl relative z-20 md:text-3xl lg:text-4xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
-          Presenting Mayo...
-          <br />
-          {/*<div className="relative mx-auto inline-block w-max ">
-            <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-[#dedcb1] py-4">
-              <TypewriterEffectSmooth words={words} />
-            </div>
-            <div className="relative bg-clip-text text-transparent bg-no-repeat bg-[#dedcb1] py-4">
-              <TypewriterEffectSmooth words={words} />
-            </div>
-          </div>*/}
-          <div className="flex mx-auto max-w-fit py-4 px-2">
-            <div className="bg-clip-text text-transparent bg-[#dedcb1]">
-              <TypewriterEffectSmooth className="text-xl" words={words} />
-            </div>
+        <div className="relative z-20 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white font-sans tracking-tight">
+            Presenting Mayo...
+          </h2>
+          <div className="mt-2 bg-clip-text text-transparent bg-[#dedcb1]">
+            <TypewriterEffectSmooth
+              className="text-xl md:text-3xl lg:text-4xl font-bold"
+              words={words}
+            />
           </div>
-        </h2>
+        </div>
       </BackgroundBeamsWithCollision>
+
       <div className="flex p-8">
         <ProjectCards />
       </div>
