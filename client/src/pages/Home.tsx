@@ -36,7 +36,7 @@ const Home = () => {
       <BackgroundBeamsWithCollision>
         <div className="relative z-20 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white font-sans tracking-tight">
-            Presenting Mayo...
+            Mayo AI...
           </h2>
           <div className="mt-2 bg-clip-text text-transparent bg-[#dedcb1]">
             <TypewriterEffectSmooth
