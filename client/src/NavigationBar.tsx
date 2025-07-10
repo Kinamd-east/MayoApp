@@ -110,7 +110,7 @@ const NavigationBar = () => {
                 </NavbarButton>
               )
             ) : (
-              <NavbarButton variant="primary" disabled>
+              <NavbarButton as="button" variant="primary" disabled>
                 Loading...
               </NavbarButton>
             )}
@@ -161,7 +161,12 @@ const NavigationBar = () => {
                   </NavbarButton>
                 )
               ) : (
-                <NavbarButton variant="primary" className="w-full" disabled>
+                <NavbarButton
+                  as="button"
+                  variant="primary"
+                  className="w-full"
+                  disabled
+                >
                   Loading...
                 </NavbarButton>
               )}
