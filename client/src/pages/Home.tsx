@@ -45,9 +45,9 @@ const Home = () => {
               <TypewriterEffectSmooth words={words} />
             </div>
           </div>*/}
-          <div className="relative mx-auto w-full max-w-fit py-4 px-2">
+          <div className="flex mx-auto max-w-fit py-4 px-2">
             <div className="bg-clip-text text-transparent bg-[#dedcb1]">
-              <TypewriterEffectSmooth words={words} />
+              <TypewriterEffectSmooth className="text-xl" words={words} />
             </div>
           </div>
         </h2>

@@ -142,13 +142,17 @@ export const TypewriterEffectSmooth = ({
   return (
     <div className={cn("flex space-x-1 my-6", className)}>
       <motion.div
-        className="origin-left overflow-hidden pb-2"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
+        className="overflow-hidden pb-2"
+        initial={{
+          width: "0%",
+        }}
+        whileInView={{
+          width: "fit-content",
+        }}
         transition={{
           duration: 2,
-          ease: "easeOut",
-          delay: 0.5,
+          ease: "linear",
+          delay: 1,
         }}
       >
         <div
