@@ -3,6 +3,7 @@ import ProjectSection from "@/components/ProjectSection";
 import ProjectCards from "@/components/ProjectCards";
 import Leaderboard from "@/components/Leaderboard";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { useMounted } from "@/hooks/useMounted";
 
 const Home = () => {
   const words = [
@@ -31,6 +32,7 @@ const Home = () => {
       text: "economy",
     },
   ];
+  const mounted = useMounted();
   return (
     <div>
       <BackgroundBeamsWithCollision>
@@ -38,11 +40,15 @@ const Home = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white font-sans tracking-tight">
             Mayo AI...
           </h2>
-          <div className="mt-2 bg-clip-text text-transparent bg-[#dedcb1]">
-            <TypewriterEffectSmooth
-              className="text-xl md:text-3xl lg:text-4xl font-bold"
-              words={words}
-            />
+          <div className="flex justify-center items-center w-full px-4 min-h-[80px]">
+            <div className="bg-clip-text text-transparent bg-[#dedcb1]">
+              {mounted && (
+                <TypewriterEffectSmooth
+                  className="text-xl md:text-3xl lg:text-4xl font-bold"
+                  words={words}
+                />
+              )}
+            </div>
           </div>
         </div>
       </BackgroundBeamsWithCollision>
