@@ -2,8 +2,35 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 import ProjectSection from "@/components/ProjectSection";
 import ProjectCards from "@/components/ProjectCards";
 import Leaderboard from "@/components/Leaderboard";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const Home = () => {
+  const words = [
+    {
+      text: "Proof",
+    },
+    {
+      text: "of",
+    },
+    {
+      text: "contribution",
+    },
+    {
+      text: "engine",
+    },
+    {
+      text: "powering",
+    },
+    {
+      text: "the",
+    },
+    {
+      text: "rewards",
+    },
+    {
+      text: "economy",
+    },
+  ];
   return (
     <div>
       <BackgroundBeamsWithCollision>
@@ -12,10 +39,10 @@ const Home = () => {
           <br />
           <div className="relative mx-auto inline-block w-max ">
             <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-[#dedcb1] py-4">
-              <span className="">...talk and earn...</span>
+              <TypewriterEffectSmooth words={words} />
             </div>
             <div className="relative bg-clip-text text-transparent bg-no-repeat bg-[#dedcb1] py-4">
-              <span className="">...talk and earn...</span>
+              <TypewriterEffectSmooth words={words} />
             </div>
           </div>
         </h2>
