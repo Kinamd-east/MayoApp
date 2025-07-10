@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { Button } from "./Button.tsx";
+import { Button } from "./button.tsx";
 
 export const InfiniteMovingCards = ({
   items,

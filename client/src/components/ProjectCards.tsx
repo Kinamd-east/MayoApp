@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const ProjectCards = () => {

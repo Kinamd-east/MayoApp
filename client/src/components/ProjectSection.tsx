@@ -1,8 +1,6 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { Button } from "@/components/ui/Button.tsx";
-import Leaderboard from "@/components/Leaderboard";
+import { Button } from "@/components/ui/button.tsx";
 
 const ProjectSection = () => {
   return (
@@ -13,7 +11,7 @@ const ProjectSection = () => {
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="flex flex-col bg-[#cccaa1] w-full max-w-4xl p-4 rounded-xl space-y-4 relative group  block h-full"
+            className="flex flex-col bg-[#cccaa1] w-full max-w-4xl p-4 rounded-xl space-y-4 relative h-full"
           >
             {/* Top section */}
             <div className="flex flex-row justify-between items-start p-2">

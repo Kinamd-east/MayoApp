@@ -1,70 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { usePrivy } from "@privy-io/react-auth";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
-const invoices = [
-  {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "$250.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "$450.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "$550.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV006",
-    paymentStatus: "Pending",
-    totalAmount: "$200.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV007",
-    paymentStatus: "Unpaid",
-    totalAmount: "$300.00",
-    paymentMethod: "Credit Card",
-  },
-];
 
 const Profile = () => {
   const { id } = useParams();
-  const [reward, setReward] = useState(0);
-  const [loading, setLoading] = useState(false);
   const { ready, authenticated } = usePrivy();
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState({
+    twitterName: "",
+    twitterUsername: "",
+    twitterPfp: "",
+  });
   console.log(id);
   useEffect(() => {
     const getUserData = async () => {
@@ -143,7 +91,7 @@ const Profile = () => {
             // </div>
             <div className="dashboard-container p-8">
               <header className="flex justify-between items-center mb-4">
-                <div class="flex flex-row text-left gap-2 items-center">
+                <div className="flex flex-row text-left gap-2 items-center">
                   <Avatar>
                     <AvatarImage
                       src={user?.twitterPfp}
@@ -151,9 +99,9 @@ const Profile = () => {
                     />
                     <AvatarFallback>{user?.twitterUsername}</AvatarFallback>
                   </Avatar>
-                  <div class="flex flex-col">
-                    <h1 class="font-bold text-black">{user?.twitterName}</h1>
-                    <p class="text-gray-500 text-[14px] font-semibold">
+                  <div className="flex flex-col">
+                    <h1 className="font-bold text-black">{user?.twitterName}</h1>
+                    <p className="text-gray-500 text-[14px] font-semibold">
                       @{user?.twitterUsername}
                     </p>
                   </div>

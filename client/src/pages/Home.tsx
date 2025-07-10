@@ -1,7 +1,4 @@
-import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { AnimatePresence, motion } from "motion/react";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import ProjectSection from "@/components/ProjectSection";
 import ProjectCards from "@/components/ProjectCards";
 import Leaderboard from "@/components/Leaderboard";
@@ -59,7 +56,7 @@ const Home = () => {
               </a>
             </li>
             <li>
-              <a href="#" class="hover:underline">
+              <a href="#" className="hover:underline">
                 Contact
               </a>
             </li>
