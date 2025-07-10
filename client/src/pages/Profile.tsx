@@ -16,7 +16,7 @@ const Profile = () => {
   console.log(id);
   useEffect(() => {
     const getUserData = async () => {
-      const res = await fetch(`http://localhost:5000/auth/user/${id}`, {
+      const res = await fetch(`https://mayoapp-lur1.onrender.com/auth/user/${id}`, {
         method: "GET",
       });
       const data = await res.json();

@@ -39,7 +39,7 @@ const NavigationBar = () => {
 
         // 2. Send to backend
         try {
-          const res = await fetch("http://localhost:5000/auth/signup", {
+          const res = await fetch("https://mayoapp-lur1.onrender.com/auth/signup", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

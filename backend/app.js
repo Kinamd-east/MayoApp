@@ -12,9 +12,9 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173", // your React app's address
+    origin: "https://mayo-app-ochre.vercel.app", // your React app's address
     credentials: true, // allow cookies/session
-  }),
+  })
 );
 app.use(bodyParser.json());
 app.use(
@@ -31,7 +31,7 @@ app.use(
       httpOnly: true,
       secure: false, // Set to true if using HTTPS
     },
-  }),
+  })
 );
 
 app.use("/auth", userRoutes);
